@@ -269,16 +269,26 @@ function loadList() {
 
 }
 
+
+
 function addCustomer() {
 
-    alert("ALERT ALERT");
+    // alert("ALERT ALERT");
 
     let TxtName = document.getElementById("TxtName");
     let customerName = TxtName.value;
 
-    customerList.push({
-        name: customerName
-    });
+    let TxtAge=document.getElementById("TxtAge");
+    let customerAge = TxtAge.value;
+
+    if (customerAge<18){
+        alert("Oops...Too Young!");
+    }else{
+        customerList.push({
+            name: customerName
+        });
+    }
+    
 
     loadList();
 
